@@ -71,16 +71,16 @@ The following public leaderboard scores were achieved:
 
 - Baseline submission: **0.50880**
 - Improved TF-IDF ensemble: **0.53844**
-- Best Logistic Regression submission: **0.54681**
-
-These results show that the approach is working, but the final score also suggests that the main limitation is the quality and domain mismatch of the scraped training data.
+- Logistic Regression: **0.54681**
+- CatBoost: **0.47672**
+- **RuBERT: 0.66882** — best result
 
 ## Main Conclusion
 
-The project successfully demonstrated a full NLP pipeline for a real-world competition setting with no provided training data.  
-The final solution included scraping, dataset construction, preprocessing, model training, and Kaggle submission generation.
+This project demonstrates a full NLP workflow for a real-world competition without a provided training set.  
+The complete pipeline included scraping, dataset construction, preprocessing, model training, evaluation, and submission generation.
 
-The best public score was **0.54681**, which indicates that the model learned useful topic patterns, but further improvements would require:
+Among all tested approaches, **RuBERT achieved the best public Kaggle score of 0.66882**, clearly outperforming TF-IDF-based models and CatBoost. This indicates that transformer-based models capture semantic structure in Russian news texts much better and are the most effective solution for this classification task.
 
 - cleaner scraped labels,
 - better alignment between website rubrics and target classes,
